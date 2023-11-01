@@ -60,29 +60,6 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
-    ////////////////////////////////////////////////////////////////////
-    Route::get('admin/form',[AdmindashbordController::class,'admin']);
-    Route::get('index',[AdmindashbordController::class,'index']);
-    Route::post('add/admin',[AdmindashbordController::class,'insert']);
-    Route::get('show/admin',[AdmindashbordController::class,'show']);
-    Route::get('delete/admin/{id}',[AdmindashbordController::class,'delete']);
-    ////////////////////////////////////////////////////////////////////////
-    Route::get('admin/classes',[ClassesController::class,'form']);
-    Route::post('add/classes',[ClassesController::class,'insert']);
-    Route::get('list/classes',[ClassesController::class,'list']);
-    Route::get('class/edit/{id}',[ClassesController::class,'edit']);
-    Route::post('update/classes/{id}',[ClassesController::class,'update']);
-    Route::get('delete/classes/{id}',[ClassesController::class,'delete']);
-    //////////////////////////////////////////////////////////////////////////////////////////
-
-    Route::get('admin/subject',[SubjectController::class,'index']);
-    Route::post('add/subject',[SubjectController::class,'insert']);
-    Route::get('list/subject',[SubjectController::class,'list']);
-    ////////////////////////////////////////////////////////////////////////////
-
-    Route::get('admin/classsubject',[ClassSubjectController::class,'index']);
-    Route::post('add/classsubject',[ClassSubjectController::class,'insert']);
-    Route::get('list/classsubject',[ClassSubjectController::class,'list']);
 
 
 

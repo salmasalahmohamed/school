@@ -39,7 +39,6 @@
             <td>{{$admin['email']}}</td>
             <td> <a href="{{url('delete/admin/'.$admin['id'])}}">delete</a></td>
         </tr>
-
     @endforeach
 </table>
 </body>
